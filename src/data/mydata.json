@@ -1,0 +1,26 @@
+{
+  "0": {
+    "schoolName": "Széchenyi István Primary School",
+    "description": "Primary School",
+    "schoolStart": "2001",
+    "schoolEnd": "2009"
+  },
+  "1": {
+    "schoolName": "Andrássy Gyula Secondary School",
+    "description": "High School",
+    "schoolStart": "2009",
+    "schoolEnd": "2013"
+  },
+  "2": {
+    "schoolName": "University of Szeged ",
+    "description": "Bioengineer",
+    "schoolStart": "2013",
+    "schoolEnd": "2018"
+  },
+  "3": {
+    "schoolName": "Debrecen University",
+    "description": "Quality Engineer",
+    "schoolStart": "2019",
+    "schoolEnd": "2020"
+  }
+}
