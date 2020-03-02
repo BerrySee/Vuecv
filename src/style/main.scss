@@ -1,3 +1,4 @@
+@import "modesvariables";
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +10,28 @@
   min-height: 100vh;
   background-color: #f3f3f3;
   color: #15202b;
-  transition: background 0.5s ease-in-out;
+
+  .active {
+    background-color: darkgrey;
+  }
+  .aboutme {
+    background: $lightaboutme;
+    @include background-setting;
+  }
+  .school {
+    background: $lightschool;
+    @include background-setting;
+  }
 }
 
 header {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 25px;
   height: 60px;
+  width: 100vw;
   background: #c3c3c3;
   transition: background 0.5 ease-in-out;
   h1 {
@@ -38,23 +52,47 @@ header {
     .nav-link:hover {
       background: #b0b0b0;
     }
+    & a:hover {
+      text-decoration: none;
+    }
   }
 }
+
 //darkmode colors
 .dark {
   background: #192734;
   color: #f3f3f3;
 
+  .active {
+    background-color: rgb(48, 88, 136);
+  }
+  .aboutme {
+    background: $darkaboutme;
+    @include background-setting;
+  }
+  .school {
+    background: $darkschool;
+    @include background-setting;
+  }
+
   header {
     background: #15202b;
 
     .nav-link {
-      color: white;
+      a {
+        color: white;
+      }
     }
     .nav-link:hover {
-      background: #192734;
+      background: #3d6285;
     }
   }
+}
+img {
+  width: 300px;
+}
+.row {
+  height: 60%;
 }
 
 //Darkmode Toggler button
@@ -108,33 +146,24 @@ input:checked + .toggler:before {
 }
 
 /*animation between components*/
-.flip-enter {
-  /* transform : rotateY(0deg);*/
+.view-enter-active,
+.view-leave-active {
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
-.flip-enter-active {
-  animation: flip-out 0.3s ease-out forwards;
+.view-enter-active {
+  transition-delay: 0.1s;
 }
-.flip-leave {
-  /* transform: rotateY(0deg);*/
+.view-enter {
+  opacity: 0;
+  transform: translateY(-100px);
 }
-.flip-leave-active {
-  animation: flip-in 0.3s ease-out forwards;
-}
-@keyframes flip-out {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes flip-in {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
+
+.view-leave {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* Containers for the app components*/
+section {
+  height: 100vh;
+}

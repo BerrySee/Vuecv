@@ -1,5 +1,5 @@
 <template>
-  <div class="item col-md-3 p-3" :class="'grid-' + index">
+  <div class="text-center col-md-6 col-xs-12 p-3">
     <h2>{{ text }}</h2>
     <p>{{ description }}</p>
     <p>{{ start }} - {{ end }}</p>
