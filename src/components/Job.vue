@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center col-md-4 col-xs-12 p-3">
+    <div class="item">
       <h2>{{ text }}</h2>
       <p>{{ description }}</p>
       <p>{{ start }} - {{ end }}</p>

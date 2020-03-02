@@ -1,17 +1,15 @@
 <template>
   <div>
     <section class="school">
-      <div class="container-fluid">
+      <div class="container">
         <h1 class="title">My schools</h1>
-        <div class="notes">
+        <div class="item-container">
           <app-school
-            v-for="(school, index) in schools"
-            v-bind:key="school"
+            v-for="(school) in schools"
             :text="school.schoolName"
             :start="school.schoolStart"
             :end="school.schoolEnd"
             :description="school.description"
-            :index="index"
           ></app-school>
         </div>
       </div>

@@ -1,8 +1,8 @@
 <template>
-  <div class="text-center col-md-6 col-xs-12 p-3 note">
+  <div class="item">
     <h2>{{ text }}</h2>
     <p>{{ description }}</p>
-    <p>{{ start }} - {{ end }}</p>
+    <h3>{{ start }} - {{ end }}</h3>
   </div>
 </template>
 <script>

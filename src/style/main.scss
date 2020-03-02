@@ -10,6 +10,44 @@
   min-height: 100vh;
   background-color: #f3f3f3;
   color: #15202b;
+  .aboutme-container {
+    margin: 1em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .me {
+      padding: 2em;
+      margin: auto;
+
+      h1 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .picture {
+      padding: 1em;
+      margin: auto;
+
+      img {
+        width: 300px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .download-btn {
+    text-align: center;
+    font-size: 16px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $lightdiv;
+  }
+
   .title {
     @include title;
     background: $lightdiv;
@@ -17,8 +55,14 @@
   .notes {
     margin: auto;
   }
-  .note {
-    @include note;
+  .item-container {
+    @include item-container;
+    .item {
+      @include item;
+      &:hover {
+        @include item_hover;
+      }
+    }
   }
   .active {
     background-color: darkgrey;
@@ -36,7 +80,7 @@
     @include background-setting;
   }
 }
-
+/* Header */
 header {
   z-index: 1;
   display: flex;
@@ -86,6 +130,9 @@ header {
   .aboutme {
     background: $darkaboutme;
     @include background-setting;
+    .download-btn {
+      background: $darkdiv;
+    }
   }
   .school {
     background: $darkschool;
@@ -108,9 +155,6 @@ header {
       background: #3d6285;
     }
   }
-}
-img {
-  width: 300px;
 }
 
 //Darkmode Toggler button
@@ -185,3 +229,5 @@ input:checked + .toggler:before {
 section {
   height: 100vh;
 }
+
+/*Media query a mobile-view-hoz*/

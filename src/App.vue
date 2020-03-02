@@ -32,20 +32,4 @@ export default {
 
 <style lang="scss">
 @import "./style/main.scss";
-.view-enter-active,
-.view-leave-active {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-.view-enter-active {
-  transition-delay: 0.3s;
-}
-.view-enter {
-  opacity: 0;
-  transform: translateY(-100px);
-}
-
-.view-leave {
-  opacity: 1;
-  transform: translateY(0px);
-}
 </style>

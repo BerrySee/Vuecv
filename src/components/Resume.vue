@@ -2,16 +2,14 @@
   <div>
     <section class="jobs">
       <div class="container">
-        <h1 class="row text-center justify-content-around pb-3">My Jobs</h1>
-        <div class="row h-100 justify-content-center">
+        <h1 class="title">My Jobs</h1>
+        <div class="item-container">
           <app-job
-            v-for="(job, index) in jobs"
-            v-bind:key="job"
+            v-for="(job) in jobs"
             :text="job.jobName"
             :start="job.jobStart"
             :end="job.jobEnd"
             :description="job.description"
-            :index="index"
           ></app-job>
         </div>
       </div>

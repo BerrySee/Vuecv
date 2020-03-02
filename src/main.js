@@ -14,5 +14,6 @@ Vue.use(VueRouter);
 new Vue({
   router,
   el: "#app",
+  vuetify: new Vuetify(),
   render: h => h(App)
 });
