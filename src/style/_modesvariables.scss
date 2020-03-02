@@ -1,14 +1,17 @@
 /*Darkmode lightmode switch */
-$darkaboutme: url("./picture/night\ wallpaper\ copy.jpg") center top;
-$lightaboutme: url("./picture/sunny\ copy.jpg") center;
+$darkaboutme: url("./picture/night\ wallpaper\ copy.jpg") center fixed;
+$lightaboutme: url("./picture/sunny\ copy.jpg") center fixed;
 
 $darkschool: url("./picture/schools-night\ copy.jpg") center;
-$lightschool: url("./picture/library-869061_1920\ copy.jpg") center;
+$lightschool: url("./picture/library-869061_1920\ copy.jpg") center fixed;
 
-$darkresume: url("./picture/laptop-1571702_1920\ copy.jpg") center;
+$darkresume: url("./picture/laptop-1571702_1920\ copy.jpg") center fixed;
 $lightresume: url("./picture/home-office-336373_1920\ copy.jpg") center;
 
 @mixin background-setting {
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
   background-size: cover;
   transition: background 0.5s ease-in;
 }
@@ -30,9 +33,10 @@ $lightdiv: rgb(222, 156, 22);
   padding: 4em;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 @mixin item {
+  height: 200px;
   text-align: center;
   display: flex;
   flex-direction: column;
