@@ -21,7 +21,7 @@
 
 <script>
 import School from "./School";
-import mydata from "../data/mydata.json";
+import mydata from "../data/schools.json";
 export default {
   props: ['mode'],
   data() {

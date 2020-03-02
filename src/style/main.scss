@@ -22,6 +22,10 @@
     background: $lightschool;
     @include background-setting;
   }
+  .jobs {
+    background: $lightresume;
+    @include background-setting;
+  }
 }
 
 header {
@@ -72,6 +76,10 @@ header {
   }
   .school {
     background: $darkschool;
+    @include background-setting;
+  }
+  .jobs {
+    background: $darkresume;
     @include background-setting;
   }
 

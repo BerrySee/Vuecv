@@ -1,0 +1,21 @@
+{
+  "0": {
+    "jobName": "Kaiserfood Kft. Csabahús",
+    "description": "I was a Quality Trainee. ",
+    "jobStart": "2016",
+    "jobEnd": "2016"
+  },
+
+  "1": {
+    "jobName": "CsabaMetal Zrt.",
+    "description": "The CsabaMetal Zrt. is in Békéscsaba I was a BMW responsible project quality engineer. The job main focus was the costumer complaint handling, the root cause analysis and the APQP processes supporting.",
+    "jobStart": "2019",
+    "jobEnd": "2020"
+  },
+  "2": {
+    "jobName": "Givaudan Hungary Kft.",
+    "description": "I was a Quality Lab Analyst in Guvaudan Hungary Kft. at Makó. The main tasks were the sample registration, sensory examination and analytical inspection",
+    "jobStart": "2018",
+    "jobEnd": "2019"
+  }
+}
