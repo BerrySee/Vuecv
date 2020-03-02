@@ -3,7 +3,7 @@
     <h1>{{ mode }} Mode</h1>
     <Toggle :mode="mode" @toggle="$emit('toggle')"></Toggle>
     <nav>
-      <router-link to="/aboutme" tag="li" activeClass="active" class="nav-link">
+      <router-link to="/" tag="li" class="nav-link">
         <a>Aboutme</a>
       </router-link>
       <router-link to="/schools" tag="li" activeClass="active" class="nav-link">

@@ -4,7 +4,7 @@ import Resume from "./components/Resume.vue";
 import Skills from "./components/Skills.vue";
 
 export const routes = [
-  { path: "/aboutme", component: Aboutme },
+  { path: "/", component: Aboutme },
   { path: "/schools", component: Schools },
   { path: "/resume", component: Resume },
   { path: "/skills", component: Skills }

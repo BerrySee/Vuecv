@@ -2,8 +2,8 @@
   <div>
     <section class="school">
       <div class="container-fluid">
-        <h1 class="row text-center justify-content-around pb-3">My schools</h1>
-        <div class="row h-100 justify-content-center">
+        <h1 class="title">My schools</h1>
+        <div class="notes">
           <app-school
             v-for="(school, index) in schools"
             v-bind:key="school"

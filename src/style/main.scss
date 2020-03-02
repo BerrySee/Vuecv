@@ -10,7 +10,16 @@
   min-height: 100vh;
   background-color: #f3f3f3;
   color: #15202b;
-
+  .title {
+    @include title;
+    background: $lightdiv;
+  }
+  .notes {
+    margin: auto;
+  }
+  .note {
+    @include note;
+  }
   .active {
     background-color: darkgrey;
   }
@@ -66,6 +75,10 @@ header {
 .dark {
   background: #192734;
   color: #f3f3f3;
+  .title {
+    @include title;
+    background: $darkdiv;
+  }
 
   .active {
     background-color: rgb(48, 88, 136);
@@ -98,9 +111,6 @@ header {
 }
 img {
   width: 300px;
-}
-.row {
-  height: 60%;
 }
 
 //Darkmode Toggler button

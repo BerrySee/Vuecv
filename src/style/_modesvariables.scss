@@ -1,3 +1,4 @@
+/*Darkmode lightmode switch */
 $darkaboutme: url("./picture/night\ wallpaper\ copy.jpg") center top;
 $lightaboutme: url("./picture/sunny\ copy.jpg") center;
 
@@ -10,4 +11,28 @@ $lightresume: url("./picture/home-office-336373_1920\ copy.jpg") center;
 @mixin background-setting {
   background-size: cover;
   transition: background 0.5s ease-in;
+}
+
+/*Components title*/
+$darkdiv: rgb(0, 102, 204);
+$lightdiv: rgb(222, 156, 22);
+@mixin title {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 2em;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 19px 47px -6px rgba(0, 0, 0, 0.75);
+}
+/*Components note*/
+@mixin note {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 2em;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 19px 47px -6px rgba(0, 0, 0, 0.75);
+  background: $lightdiv;
 }
