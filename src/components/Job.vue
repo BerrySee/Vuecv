@@ -11,7 +11,6 @@
 export default {
   name: "Job",
   props: {
-    index: Number,
     text: String,
     start: String,
     end: String,

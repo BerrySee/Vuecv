@@ -2,18 +2,18 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import { routes } from "./routes";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
+import Chartkick from "vue-chartkick";
+import Chart from "chart.js";
 const router = new VueRouter({
   mode: "history",
   routes
 });
-Vue.use(BootstrapVue);
+Vue.use(Chartkick.use(Chart));
 
 Vue.use(VueRouter);
 new Vue({
   router,
   el: "#app",
-  vuetify: new Vuetify(),
   render: h => h(App)
 });

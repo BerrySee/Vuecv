@@ -79,6 +79,9 @@
     background: $lightresume;
     @include background-setting;
   }
+  .skills {
+    @include background-setting;
+  }
 }
 /* Header */
 header {
