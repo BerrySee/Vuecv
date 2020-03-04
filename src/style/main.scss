@@ -1,0 +1,259 @@
+@import 'modesvariables';
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.app {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3f3f3;
+  color: #15202b;
+  .aboutme-container {
+    margin: 1em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .me {
+      padding: 2em;
+      margin: auto;
+
+      h1 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .picture {
+      padding: 1em;
+      margin: auto;
+
+      img {
+        width: 300px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .download-btn {
+    text-align: center;
+    font-size: 16px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $lightdiv;
+    cursor: pointer;
+  }
+  .title-container {
+    padding: 2em;
+  }
+  .title {
+    @include title;
+    background: $lightdiv;
+  }
+  .notes {
+    margin: auto;
+  }
+  .item-container {
+    @include item-container;
+    .item {
+      @include item;
+      &:hover {
+        @include item_hover;
+      }
+    }
+  }
+  .active {
+    background-color: darkgrey;
+  }
+  .aboutme {
+    background: $lightaboutme;
+    @include background-setting;
+  }
+  .school {
+    background: $lightschool;
+    @include background-setting;
+  }
+  .jobs {
+    background: $lightresume;
+    @include background-setting;
+  }
+  .skills {
+    @include background-setting;
+
+    &-container {
+      margin: 2em;
+      padding: 2em;
+    }
+  }
+}
+/* Header */
+header {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  height: 60px;
+  width: 100%;
+  background: #c3c3c3;
+  transition: background 0.5 ease-in-out;
+  h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  nav {
+    display: flex;
+    height: 60px;
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0px 15px;
+      text-decoration: none;
+      color: #15202b;
+      & a {
+        color: rgb(38, 38, 38);
+        text-decoration: none;
+      }
+    }
+    .nav-link:hover {
+      background: #b0b0b0;
+    }
+    .nav-link a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//darkmode colors
+.dark {
+  background: #192734;
+  color: #f3f3f3;
+  .title {
+    @include title;
+    background: $darkdiv;
+  }
+
+  .active {
+    background-color: rgb(48, 88, 136);
+  }
+  .aboutme {
+    background: $darkaboutme;
+    @include background-setting;
+    .download-btn {
+      background: $darkdiv;
+    }
+  }
+  .school {
+    background: $darkschool;
+    @include background-setting;
+  }
+  .jobs {
+    background: $darkresume;
+    @include background-setting;
+  }
+
+  header {
+    background: #15202b;
+
+    .nav-link {
+      a {
+        color: white;
+      }
+    }
+    .nav-link:hover {
+      background: #3d6285;
+    }
+  }
+}
+
+//Darkmode Toggler button
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.toggler {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #15202b;
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    transition: 0.4s;
+  }
+}
+input:checked + .toggler {
+  background: #2196f6;
+}
+input:focus + .toggler {
+  box-shadow: 0 0 2px #2196f6;
+}
+input:checked + .toggler:before {
+  transform: translateX(22px);
+}
+.toggler.round {
+  border-radius: 20px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+/*animation between components*/
+.view-enter-active,
+.view-leave-active {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.view-enter-active {
+  transition-delay: 0.3s;
+}
+.view-enter {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.view-leave {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Containers for the app components*/
+section {
+  transition: background 0.5s ease-in;
+}
+
+/*Media query a mobile-view-hoz*/
+
+/* Chart */
+.chartclass {
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}

@@ -1,8 +1,19 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import VueRouter from 'vue-router';
+import { routes } from './routes';
 
-Vue.config.productionTip = false
+import Chartkick from 'vue-chartkick';
+import Chart from 'chart.js';
+const router = new VueRouter({
+  mode: 'history',
+  routes
+});
+Vue.use(Chartkick.use(Chart));
 
+Vue.use(VueRouter);
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  el: '#app',
+  render: h => h(App)
+});
