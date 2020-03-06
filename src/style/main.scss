@@ -87,6 +87,7 @@ body {
     @include background-setting;
   }
   .skills {
+    height: 100vh;
     @include background-setting;
 
     &-container {
@@ -254,6 +255,9 @@ section {
 /* Chart */
 .chartclass {
   margin: 0 auto;
-  width: 75%;
-  height: auto;
+  width: 50%;
+  height: 400px;
+}
+.skills-container {
+  height : 100px;
 }
